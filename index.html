@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Transforme Seu Instagram em uma Máquina de Agendamentos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .gradient-bg {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .pulse-button {
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    .fade-in {
+      animation: fadeIn 0.8s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+
+  <!-- Exemplo de botão com link atualizado -->
+  <section class="text-center py-20 gradient-bg text-white">
+    <h1 class="text-4xl md:text-6xl font-bold mb-6">Transforme Seu Instagram em uma Máquina de Agendamentos</h1>
+    <p class="text-xl mb-6">Mesmo com poucos seguidores e sem saber o que postar</p>
+    <a href="https://pay.hub.la/LITBfg2nF4HmqXdhtEr4" target="_blank">
+      <button class="pulse-button bg-yellow-400 text-purple-800 px-8 py-4 rounded-full text-xl font-bold hover:bg-yellow-300 transition-all">
+        SIM, EU QUERO TRANSFORMAR MEU INSTAGRAM! 🚀
+      </button>
+    </a>
+  </section>
+
+  <!-- Repita isso para os outros botões... -->
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6 text-center">
+    <p>© 2024 Curso INSTA - Todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>
