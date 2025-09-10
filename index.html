@@ -1,65 +1,624 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Transforme Seu Instagram em uma Máquina de Agendamentos</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-
-    .gradient-bg {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    }
-
-    .gradient-text {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .pulse-button {
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
-    }
-
-    .fade-in {
-      animation: fadeIn 0.8s ease-in;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transforme Seu Instagram em uma Máquina de Agendamentos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .pulse-button {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
 <body class="bg-gray-50">
+    <!-- Header -->
+    <header class="gradient-bg text-white py-4 sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <h1 class="text-xl font-bold">📱 Curso INSTA</h1>
+                <button onclick="scrollToOffer()" class="bg-white text-purple-600 px-6 py-2 rounded-full font-semibold hover:bg-gray-100 transition-all">
+                    Quero Começar
+                </button>
+            </div>
+        </div>
+    </header>
 
-  <!-- Exemplo de botão com link atualizado -->
-  <section class="text-center py-20 gradient-bg text-white">
-    <h1 class="text-4xl md:text-6xl font-bold mb-6">Transforme Seu Instagram em uma Máquina de Agendamentos</h1>
-    <p class="text-xl mb-6">Mesmo com poucos seguidores e sem saber o que postar</p>
-    <a href="https://pay.hub.la/LITBfg2nF4HmqXdhtEr4" target="_blank">
-      <button class="pulse-button bg-yellow-400 text-purple-800 px-8 py-4 rounded-full text-xl font-bold hover:bg-yellow-300 transition-all">
-        SIM, EU QUERO TRANSFORMAR MEU INSTAGRAM! 🚀
-      </button>
-    </a>
-  </section>
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-4xl mx-auto fade-in">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    Transforme Seu Instagram em uma <span class="text-yellow-300">Máquina de Agendamentos</span> em Apenas 7 Dias
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 opacity-90">
+                    Mesmo com Poucos Seguidores, Pouco Tempo e Sem Saber o que Postar
+                </p>
+                <div class="floating">
+                    <div class="text-6xl mb-8">📱✨</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Repita isso para os outros botões... -->
+    <!-- Dobra 1: O Gancho -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-800">
+                    Cansada de postar, postar... e nada mudar? 😔
+                </h2>
+                <div class="bg-red-50 border-l-4 border-red-400 p-6 mb-8 text-left">
+                    <p class="text-lg text-gray-700 mb-4">
+                        Enquanto outras profissionais vivem com a agenda cheia, você segue tentando adivinhar o que postar. Sem consistência. Sem resultado. Sem direção.
+                    </p>
+                    <p class="text-xl font-semibold text-gray-800">
+                        A verdade é: você não precisa virar influencer. <span class="gradient-text">Você precisa de um plano.</span>
+                    </p>
+                </div>
+                <button onclick="scrollToOffer()" class="pulse-button bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-full text-lg font-bold hover:shadow-lg transition-all">
+                    QUERO UM PLANO QUE FUNCIONA ➜
+                </button>
+            </div>
+        </div>
+    </section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-white py-6 text-center">
-    <p>© 2024 Curso INSTA - Todos os direitos reservados</p>
-  </footer>
+    <!-- Dobra 2: A Promessa -->
+    <section class="py-16 bg-gradient-to-r from-blue-50 to-purple-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center gradient-text">
+                    Em apenas 7 dias, transforme seu Instagram em uma vitrine estratégica
+                </h2>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-bold mb-4 text-gray-800">Mesmo que você tenha:</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center text-gray-700">
+                                <span class="text-red-500 mr-3">❌</span>
+                                Poucos seguidores
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <span class="text-red-500 mr-3">❌</span>
+                                Não saiba o que postar
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <span class="text-red-500 mr-3">❌</span>
+                                Pouco tempo
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-bold mb-4 text-gray-800">Você vai conseguir:</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center text-gray-700">
+                                <span class="text-green-500 mr-3">✅</span>
+                                Atrair clientes no automático
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <span class="text-green-500 mr-3">✅</span>
+                                Ter uma estratégia clara
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <span class="text-green-500 mr-3">✅</span>
+                                Resultados em 7 dias
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="text-center bg-yellow-100 p-6 rounded-lg">
+                    <p class="text-lg font-semibold text-gray-800 mb-4">
+                        Este não é um curso teórico. É um atalho.
+                    </p>
+                    <p class="text-gray-700">
+                        Para quem precisa de resultado rápido, sem perder meses estudando marketing.
+                    </p>
+                </div>
+                
+                <div class="text-center mt-8">
+                    <button onclick="scrollToOffer()" class="pulse-button bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-full text-lg font-bold hover:shadow-lg transition-all">
+                        EU PRECISO DISSO ➜
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</body>
+    <!-- Dobra 3: Por Que Funciona -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-800">
+                    Por Que Funciona? 🎯
+                </h2>
+                
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
+                    <div class="text-center p-6 bg-blue-50 rounded-lg">
+                        <div class="text-4xl mb-4">🎯</div>
+                        <h3 class="text-xl font-bold mb-4 text-gray-800">Resolve um problema real</h3>
+                        <p class="text-gray-700">
+                            Você já tentou sozinha. Esse método mostra o que funciona pra atrair clientes — sem enrolação.
+                        </p>
+                    </div>
+                    
+                    <div class="text-center p-6 bg-green-50 rounded-lg">
+                        <div class="text-4xl mb-4">🗺️</div>
+                        <h3 class="text-xl font-bold mb-4 text-gray-800">Caminho claro</h3>
+                        <ul class="text-gray-700 space-y-2">
+                            <li>• Ajuste de perfil</li>
+                            <li>• Posts que vendem</li>
+                            <li>• Conteúdo do mês em 1 hora</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="text-center p-6 bg-purple-50 rounded-lg">
+                        <div class="text-4xl mb-4">💪</div>
+                        <h3 class="text-xl font-bold mb-4 text-gray-800">Elimina suas objeções</h3>
+                        <ul class="text-gray-700 space-y-2">
+                            <li>• "Sem tempo" → aulas curtas</li>
+                            <li>• "Não sei o que postar" → modelos prontos</li>
+                            <li>• "Não gosto de aparecer" → sem exposição forçada</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <button onclick="scrollToOffer()" class="pulse-button bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full text-lg font-bold hover:shadow-lg transition-all">
+                        SIM, EU QUERO ESSE CAMINHO ➜
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dobra 4: Para Quem É -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-gray-800">
+                    Para Quem É o Curso? 👩‍💼
+                </h2>
+                
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <p class="text-lg mb-6 text-gray-700">Este curso é para você que:</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <span class="text-purple-500 mr-3 mt-1">✓</span>
+                                <span class="text-gray-700">É <strong>psicóloga, nutricionista, fisioterapeuta, terapeuta, advogada ou outra prestadora de serviço</strong></span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-purple-500 mr-3 mt-1">✓</span>
+                                <span class="text-gray-700">Depende do Instagram para atrair clientes, mas <strong>não sabe como usar com estratégia</strong></span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-purple-500 mr-3 mt-1">✓</span>
+                                <span class="text-gray-700"><strong>Se sente travada</strong> na hora de criar conteúdo</span>
+                            </li>
+                        </ul>
+                        
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <span class="text-purple-500 mr-3 mt-1">✓</span>
+                                <span class="text-gray-700">Quer <strong>vender seus serviços sem precisar virar blogueira</strong></span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-purple-500 mr-3 mt-1">✓</span>
+                                <span class="text-gray-700">Tem <strong>pouco tempo</strong>, mas sabe que precisa aparecer com consistência</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mt-8 p-4 bg-blue-50 rounded-lg">
+                        <p class="text-gray-700 text-center">
+                            Não importa se você é iniciante ou já tem um perfil ativo — o curso vai <strong>do básico ao avançado</strong>, com foco total em resultado prático.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dobra 5: O Que Você Vai Receber -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center gradient-text">
+                    O Que Você Vai Receber 📚
+                </h2>
+                
+                <div class="text-center mb-8">
+                    <div class="inline-flex items-center space-x-4 bg-gradient-to-r from-purple-100 to-blue-100 px-6 py-3 rounded-full">
+                        <span class="font-bold text-purple-600">7 dias intensivos</span>
+                        <span class="text-gray-400">|</span>
+                        <span class="font-bold text-blue-600">22 aulas práticas</span>
+                        <span class="text-gray-400">|</span>
+                        <span class="font-bold text-green-600">Aplicação imediata</span>
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-12">
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">📋 Módulos:</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center p-3 bg-gray-50 rounded-lg">
+                                <span class="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">1</span>
+                                <span class="text-gray-700">O Erro que Ninguém Te Contou</span>
+                            </div>
+                            <div class="flex items-center p-3 bg-gray-50 rounded-lg">
+                                <span class="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">2</span>
+                                <span class="text-gray-700">Monte Sua Vitrine Digital</span>
+                            </div>
+                            <div class="flex items-center p-3 bg-gray-50 rounded-lg">
+                                <span class="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">3</span>
+                                <span class="text-gray-700">O Feed que Posiciona</span>
+                            </div>
+                            <div class="flex items-center p-3 bg-gray-50 rounded-lg">
+                                <span class="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">4</span>
+                                <span class="text-gray-700">Conteúdo do Mês em 1 Hora</span>
+                            </div>
+                            <div class="flex items-center p-3 bg-gray-50 rounded-lg">
+                                <span class="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">5</span>
+                                <span class="text-gray-700">Os Stories que Convertem</span>
+                            </div>
+                            <div class="flex items-center p-3 bg-gray-50 rounded-lg">
+                                <span class="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">6</span>
+                                <span class="text-gray-700">Posicionamento Leve, mas Firme</span>
+                            </div>
+                            <div class="flex items-center p-3 bg-gray-50 rounded-lg">
+                                <span class="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">7</span>
+                                <span class="text-gray-700">Execução: O Seu Plano em Ação</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">🎁 Bônus Exclusivos:</h3>
+                        <div class="space-y-4">
+                            <div class="p-4 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg border-l-4 border-yellow-400">
+                                <h4 class="font-bold text-gray-800 mb-2">Aula Bônus 1</h4>
+                                <p class="text-sm text-gray-700">Como perder o medo da câmera (e aparecer nos stories sem travar)</p>
+                            </div>
+                            <div class="p-4 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg border-l-4 border-green-400">
+                                <h4 class="font-bold text-gray-800 mb-2">Aula Bônus 2</h4>
+                                <p class="text-sm text-gray-700">Como transformar seguidores em clientes pelo direct (sem parecer desesperada)</p>
+                            </div>
+                            <div class="p-4 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg border-l-4 border-purple-400">
+                                <h4 class="font-bold text-gray-800 mb-2">Aula Bônus 3</h4>
+                                <p class="text-sm text-gray-700">Como transformar cada cliente em uma vitrine viva (prova social no digital)</p>
+                            </div>
+                            <div class="p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border-l-4 border-blue-400">
+                                <h4 class="font-bold text-gray-800 mb-2">Aula Bônus 4</h4>
+                                <p class="text-sm text-gray-700">O ciclo dos 30 dias: como revisar, ajustar e melhorar mês após mês</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dobra 6: Benefícios -->
+    <section class="py-16 bg-gradient-to-r from-green-50 to-blue-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 gradient-text">
+                    Benefícios Imediatos ⚡
+                </h2>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                        <div class="text-4xl mb-4">🎯</div>
+                        <h3 class="font-bold text-gray-800 mb-2">Perfil Otimizado</h3>
+                        <p class="text-sm text-gray-600">Vitrine profissional que atrai</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                        <div class="text-4xl mb-4">📅</div>
+                        <h3 class="font-bold text-gray-800 mb-2">30 Dias de Conteúdo</h3>
+                        <p class="text-sm text-gray-600">Pronto para usar</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                        <div class="text-4xl mb-4">💡</div>
+                        <h3 class="font-bold text-gray-800 mb-2">Clareza Total</h3>
+                        <p class="text-sm text-gray-600">Sobre o que funciona</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                        <div class="text-4xl mb-4">🎪</div>
+                        <h3 class="font-bold text-gray-800 mb-2">Consistência</h3>
+                        <p class="text-sm text-gray-600">Com leveza e estratégia</p>
+                    </div>
+                </div>
+                
+                <button onclick="scrollToOffer()" class="pulse-button bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-full text-lg font-bold hover:shadow-lg transition-all">
+                    QUERO RESULTADO JÁ ➜
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dobra 7: Oferta -->
+    <section id="offer" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-800">
+                    Oferta Especial 🎉
+                </h2>
+                
+                <div class="bg-gradient-to-r from-purple-600 to-blue-600 text-white p-8 rounded-lg shadow-xl mb-8">
+                    <div class="text-6xl mb-4">💰</div>
+                    <h3 class="text-2xl md:text-3xl font-bold mb-4">
+                        Por apenas R$197
+                    </h3>
+                    <p class="text-xl mb-6 opacity-90">
+                        ou 12x de R$19,90
+                    </p>
+                    
+                    <div class="bg-white bg-opacity-20 p-6 rounded-lg mb-6">
+                        <h4 class="text-xl font-bold mb-4">Você leva tudo isso:</h4>
+                        <ul class="text-left space-y-2 max-w-md mx-auto">
+                            <li class="flex items-center">
+                                <span class="text-yellow-300 mr-3">✓</span>
+                                22 aulas práticas
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-yellow-300 mr-3">✓</span>
+                                Modelos prontos
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-yellow-300 mr-3">✓</span>
+                                Checklists e prompts
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-yellow-300 mr-3">✓</span>
+                                Calendário de postagens
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-yellow-300 mr-3">✓</span>
+                                4 aulas bônus exclusivas
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <button onclick="window.open('https://www.notion.so/P-gina-de-Vendas-Curso-2248033fc35980649e73d88e4f3fdd5f?pvs=21', '_blank')" class="bg-yellow-400 text-purple-800 px-8 py-4 rounded-full text-xl font-bold hover:bg-yellow-300 transition-all pulse-button">
+                        QUERO GARANTIR MINHA VAGA AGORA! 🚀
+                    </button>
+                </div>
+                
+                <div class="flex justify-center items-center space-x-4 text-sm text-gray-600">
+                    <span class="flex items-center">
+                        <span class="text-green-500 mr-2">🔒</span>
+                        Compra 100% Segura
+                    </span>
+                    <span class="flex items-center">
+                        <span class="text-blue-500 mr-2">⚡</span>
+                        Acesso Imediato
+                    </span>
+                    <span class="flex items-center">
+                        <span class="text-purple-500 mr-2">📱</span>
+                        Funciona no Celular
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dobra 9: Quem É a Mentora -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-gray-800">
+                    Quem É a Mentora 👩‍🏫
+                </h2>
+                
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="flex flex-col md:flex-row items-center gap-8">
+                        <div class="w-48 h-48 bg-gradient-to-br from-purple-400 to-blue-500 rounded-full flex items-center justify-center text-white text-6xl">
+                            👩‍💼
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold mb-4 gradient-text">
+                                Oi, eu sou Thayane! 👋
+                            </h3>
+                            <p class="text-lg text-gray-700 mb-4">
+                                <strong>Estrategista digital por missão.</strong>
+                            </p>
+                            <p class="text-gray-700 mb-4">
+                                Já estive no seu lugar: postava sem direção, morria de vergonha de aparecer, e não sabia como transformar seguidores em clientes.
+                            </p>
+                            <p class="text-gray-700 mb-6">
+                                Hoje, ajudo prestadoras de serviço a alcançarem o mesmo resultado — com um plano simples e eficaz.
+                            </p>
+                            <button onclick="window.open('https://www.notion.so/P-gina-de-Vendas-Curso-2248033fc35980649e73d88e4f3fdd5f?pvs=21', '_blank')" class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-full font-bold hover:shadow-lg transition-all">
+                                QUERO SER SUA ALUNA ➜
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dobra 10: Garantia -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-800">
+                    Garantia Incondicional 🛡️
+                </h2>
+                
+                <div class="bg-gradient-to-r from-green-50 to-blue-50 p-8 rounded-lg shadow-lg mb-8">
+                    <div class="text-6xl mb-6">🛡️</div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">
+                        7 Dias para testar.
+                    </h3>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Se não funcionar pra você, devolvemos 100% do seu dinheiro.
+                    </p>
+                    
+                    <button onclick="window.open('https://www.notion.so/P-gina-de-Vendas-Curso-2248033fc35980649e73d88e4f3fdd5f?pvs=21', '_blank')" class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full text-lg font-bold hover:shadow-lg transition-all pulse-button">
+                        NÃO TENHO NADA A PERDER ➜
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dobra 11: Chamada Final -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 gradient-text">
+                    Chamada Final ⚡
+                </h2>
+                
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <p class="text-xl text-gray-700 mb-6">
+                        As vagas são limitadas e o acesso é imediato.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8">
+                        <strong>Clique no botão abaixo e comece agora:</strong>
+                    </p>
+                    
+                    <div class="bg-gradient-to-r from-purple-600 to-pink-600 p-6 rounded-lg text-white mb-6">
+                        <h3 class="text-2xl font-bold mb-4">Curso INSTA</h3>
+                        <p class="text-lg opacity-90 mb-4">
+                            Transforme seu Instagram em uma máquina de agendamentos
+                        </p>
+                    </div>
+                    
+                    <button onclick="window.open('https://www.notion.so/P-gina-de-Vendas-Curso-2248033fc35980649e73d88e4f3fdd5f?pvs=21', '_blank')" class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-6 rounded-full text-2xl font-bold hover:shadow-lg transition-all pulse-button">
+                        QUERO MEU PLANO 🚀
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="py-16 gradient-bg text-white">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Não Deixe Mais Um Mês Passar Sem Estratégia! ⏰
+                </h2>
+                <p class="text-xl mb-8 opacity-90">
+                    Enquanto você pensa, outras profissionais já estão aplicando e vendo resultados. 
+                    Sua agenda cheia está a apenas 7 dias de distância.
+                </p>
+                
+                <button onclick="window.open('https://www.notion.so/P-gina-de-Vendas-Curso-2248033fc35980649e73d88e4f3fdd5f?pvs=21', '_blank')" class="bg-yellow-400 text-purple-800 px-8 py-4 rounded-full text-xl font-bold hover:bg-yellow-300 transition-all pulse-button mb-6">
+                    SIM, EU QUERO TRANSFORMAR MEU INSTAGRAM! 🚀
+                </button>
+                
+                <p class="text-sm opacity-75">
+                    ⚡ Acesso imediato após a compra | 🔒 Pagamento 100% seguro | 📱 Funciona no celular e computador
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">
+                © 2024 Curso INSTA - Todos os direitos reservados
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToOffer() {
+            document.getElementById('offer').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+
+        // Adiciona efeito de fade-in aos elementos quando aparecem na tela
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observa todas as seções
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Efeito de contagem regressiva (opcional)
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const endTime = now + (24 * 60 * 60 * 1000); // 24 horas
+            
+            setInterval(() => {
+                const currentTime = new Date().getTime();
+                const timeLeft = endTime - currentTime;
+                
+                if (timeLeft > 0) {
+                    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+                    
+                    // Você pode adicionar um elemento de countdown se quiser
+                    // document.getElementById('countdown').innerHTML = ${hours}h ${minutes}m ${seconds}s;
+                }
+            }, 1000);
+        }
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97cc417bb32ce0fd',t:'MTc1NzQ3OTMxNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
